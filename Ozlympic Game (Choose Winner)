@@ -1,0 +1,114 @@
+public class Ozlympic {
+
+public abstract class Participant {
+
+	protected String ID;
+	protected String name;
+	protected int age;
+	protected String state;
+
+	/* accessor methods for both athletes classes and official */
+
+	public String getID() {
+		return this.ID;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public int getAge() {
+		return this.age;
+	}
+
+	public String getState() {
+		return this.state;
+	}
+
+}
+
+public class Swimmer extends Athletes {
+
+	/* swimmers constructors */
+	public Swimmer(String IDs, String names, int ages, String states) {
+		super(IDs, names, ages, states);
+	}
+
+	public Swimmer() {
+	};
+
+	// load swimmers into an array //
+	public void loadSwimmers(Swimmer[] swimList) {
+		swimList[0] = new Swimmer("SW01", "Bob", 34, "Victoria");
+		swimList[1] = new Swimmer("SW02", "Terry", 50, "Queensland");
+		swimList[2] = new Swimmer("SW03", "James", 60, "NSW");
+		swimList[3] = new Swimmer("SW04", "Lee", 29, "NSW");
+		swimList[4] = new Swimmer("SW05", "Lim", 32, "Victoria");
+	}
+
+	// randomly generate swimmers' race time for current game //
+	public void compete(Game gam, Athletes swim) {
+		Random RNG = new Random();
+		if (gam instanceof SwimmingGame) {
+			int competeTime = RNG.nextInt(101) + 100;
+			swim.setTime(competeTime);
+		} else {
+			System.out.println(swim.getName() + " has entered the wrong game.");
+		}
+   }
+  }
+  
+  public class Driver {
+	// Game code 
+  
+  
+	private Athlete Winner;
+  
+  
+  Swimmer swimList[] = new Swimmer[5];
+  
+  //add the Swimmer to the Swimmer arraylist
+  public void runDriver() {
+  Swimmer swimload = new Swimmer();
+		swimload.loadSwimmers(swimList);
+   }
+ 
+ //Start to get the compete time
+ public startGame(Swimmer[] list)
+ for(Swimmer swimmer : List)
+ {
+    swimmer.compete;
+ }
+   
+ //Judge who is the winner of Swimming Game
+ public void chooseTheWinner(Swimmer[] List){
+  Swimmer fastestPlayer = List[0];
+  for(int i=1; List.lenth ;i++ ){
+    if List[i].gettime()> fastestPlayer;
+    fastestPlayer = List[i];
+  }
+  
+  //print the winner name
+  public void printWinner(){
+  system.out.println("Winner of this SwimmingGame : " + fastestPlayer.getName())
+  }
+  }
+  
+  
+	
+	/*=====================================================
+	 * =================== MAIN CLASS ===================
+	 * ==================================================
+	 */
+	public static void main(String[] args){
+		Driver mydriver = new Driver();
+		mydriver.runDriver();
+		 
+		
+	}
+
+}
+ }
+   
+  
+	
